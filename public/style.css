@@ -44,28 +44,60 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 4vw;
-    height: 4vw;
+    width: 4.5vw;
+    height: 4.5vw;
     border-radius: 50%;
 }
 
 .bordes img {
     position: absolute;
     z-index: 30;
-    width: 3vw;
-    height: 3vw;
+    width: 3.3vw;
+    height: 3.3vw;
     border-radius: 50%;
     transition: 0.3s;
     padding: 7px;
 }
 
 .bordes img:hover {
-    border-radius: 25%;
+    border-radius: 0%;
     cursor: pointer;
 }
 
-.bordes img:active {
-    transform: rotate(90deg);
+svg {
+    animation: svg-animation 8s infinite linear;
+    width: 4vw;
+    height: 4vw;
+}
+
+@keyframes svg-animation {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg)
+    }
+}
+
+circle {
+    fill: transparent;
+    stroke-linecap: round;
+    stroke-dasharray: 280;
+    stroke-dashoffset: 280;
+    transform-origin: 50% 50%;
+    stroke-width: 2;
+    animation-fill-mode: forwards;
+}
+
+@keyframes circle-animation {
+    from {
+        stroke-dashoffset: 280;
+        transform: rotate(0deg);
+    }
+    to {
+        stroke-dashoffset: 0;
+        transform: rotate(360deg);
+    }
 }
 
 .swp {
@@ -79,7 +111,6 @@ header {
     padding: 5vw;
     width: 30vw;
     height: 30vw;
-    /* overflow-y: hidden; */
     background: linear-gradient(120deg, #7a00fb, #4200e7);
     border-radius: 10%;
     display: flex;
@@ -103,47 +134,4 @@ header {
 
 .swp .illu .silueta h2 {
     color: white;
-}
-
-svg {
-    animation: 2s 1 linear infinite svg-animation;
-    max-width: 100px;
-}
-
-@keyframes svg-animation {
-    0% {
-        transform: rotateZ(0deg);
-    }
-    100% {
-        transform: rotateZ(360deg)
-    }
-}
-
-.progress-ring__circle {
-    animation: circle-animation 1.2s ease-in-out 1 both normal;
-    display: block;
-    fill: transparent;
-    stroke-linecap: round;
-    stroke-dasharray: 283;
-    stroke-dashoffset: 280;
-    transform-origin: 50% 50%;
-}
-
-@keyframes circle-animation {
-    0% {
-        stroke-dashoffset: 280;
-        transform: rotate(0deg);
-    }
-    100% {
-        stroke-dashoffset: 0;
-        transform: rotate(360deg);
-    }
-    /*75% {
-        stroke-dashoffset: 75;
-        transform: rotate(45deg);
-    }
-    100% {
-        stroke-dashoffset: 280;
-        transform: rotate(360deg);
-    } */
 }

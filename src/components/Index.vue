@@ -2,21 +2,23 @@
     <div>
         <header>
             <div class="icon">
-                <a href="#">DaivDiz</a>
+                <a href="#"></a>
             </div>
             <div class="der">
-                <div class="bordes" @mouseenter="hover=true" @mouseleave="hover=false">
-                <svg class="progress-ring" width="4vw" height="4vw" >
-                    <linearGradient id="linearColors">
-                        <stop offset="0%" stop-color="#7a00fb"/>
-                        <stop offset="100%" stop-color="#4200e7"/>
-                    </linearGradient>
-                    <circle v-if="hover" class="progress-ring__circle"  stroke="url(#linearColors)" r="1.5vw" cx="2vw" cy="2vw"/>
-                </svg>
-                <img src="../assets/utils/menu.svg" alt="">
+                <div class="bordes" @mouseenter="hover=true" @mouseleave="hover=false" @click="menu=!menu">
+                    <svg class="progress-ring" width="4vw" height="4vw" >
+                        <linearGradient id="linearColors">
+                            <stop offset="0%" stop-color="#7a00fb"/>
+                            <stop offset="100%" stop-color="#4200e7"/>
+                        </linearGradient>
+                        <transition name="fill" mode="out-in">
+                            <circle v-if="menu" stroke="url(#linearColors)" r="1.9vw" cx="2vw" cy="2vw"/>
+                            
+                        </transition>
+                    </svg>
+                    <img src="../assets/utils/menu.svg" :style="[menu ? {transform: 'rotateZ(-90deg)'} : {transform: 'rotateZ(0deg)'}]" alt="Boton de Menu">
+                </div>
             </div>
-            </div>
-            
         </header>
         <div class="swp">
             <div class="illu">
@@ -37,8 +39,26 @@ export default{
     data(){
         return{
             hover:'',
+            menu:'',
+        }
+    },
+    computed:{
+        rotate(){
+            return {
+                
+            }
         }
     }
 }
 </script>
 
+<style>
+.fill-enter-to,.fill-leave{
+}
+.fill-enter-active{
+    animation: circle-animation 8s forwards normal;
+}
+.fill-leave-active{
+    animation: circle-animation 1.5s forwards reverse;
+}
+</style>
