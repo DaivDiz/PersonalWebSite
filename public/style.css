@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Nunito', sans-serif; */
+    font-family: 'Raleway', sans-serif;
+}
+
+html {
+    background: #100f14;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.der {
+    width: 10vw;
+    height: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    width: 10vw;
+    height: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon a {
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+}
+
+.bordes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+}
+
+.bordes img {
+    position: absolute;
+    z-index: 30;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    transition: 0.3s;
+    padding: 7px;
+}
+
+.bordes img:hover {
+    border-radius: 25%;
+    cursor: pointer;
+}
+
+.bordes img:active {
+    transform: rotate(90deg);
+}
+
+.swp {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.swp .illu {
+    margin-left: 10vw;
+    padding: 5vw;
+    width: 30vw;
+    height: 30vw;
+    /* overflow-y: hidden; */
+    background: linear-gradient(120deg, #7a00fb, #4200e7);
+    border-radius: 10%;
+    display: flex;
+    text-align: center;
+}
+
+.swp .illu .silueta {
+    transition: all 0.3s;
+}
+
+.swp .illu .silueta:hover {
+    margin-top: -8%;
+}
+
+.swp .illu .silueta img {
+    width: 20vw;
+    position: relative;
+    margin-top: -40%;
+    user-select: none;
+}
+
+.swp .illu .silueta h2 {
+    color: white;
+}
+
+svg {
+    animation: 2s 1 linear infinite svg-animation;
+    max-width: 100px;
+}
+
+@keyframes svg-animation {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg)
+    }
+}
+
+.progress-ring__circle {
+    animation: circle-animation 1.2s ease-in-out 1 both normal;
+    display: block;
+    fill: transparent;
+    stroke-linecap: round;
+    stroke-dasharray: 283;
+    stroke-dashoffset: 280;
+    transform-origin: 50% 50%;
+}
+
+@keyframes circle-animation {
+    0% {
+        stroke-dashoffset: 280;
+        transform: rotate(0deg);
+    }
+    100% {
+        stroke-dashoffset: 0;
+        transform: rotate(360deg);
+    }
+    /*75% {
+        stroke-dashoffset: 75;
+        transform: rotate(45deg);
+    }
+    100% {
+        stroke-dashoffset: 280;
+        transform: rotate(360deg);
+    } */
+}

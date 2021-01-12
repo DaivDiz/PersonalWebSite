@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+    /* overflow-y: hidden; */
+    background: black;
+}
+
+.canvasBackground {
+    position: fixed;
+    background: black;
+}
+
+.btns {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    text-align: center;
+    bottom: 10px;
+    filter: invert(1);
+}
+
+.btns input {
+    margin: 0 10px;
+}
+
+.btns img {
+    width: 40px;
+    height: 15px;
+}
+
+.btns img:hover {
+    cursor: pointer;
+}
+
+.btns img:active {
+    transform: scale(0.8);
+}
+
+.sections {
+    position: absolute;
+    white-space: nowrap;
+    display: inline-flex;
+}
+
+.sections section {
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    width: 98vw;
+    height: 100vh;
+    justify-content: center;
+    position: relative;
+}
+
+.parent {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.child {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    color: white;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 18px;
+}
+
+.child h1 {
+    font-size: 150px;
+}
+
+.socialNetworks {
+    height: 40px;
+    margin-top: 15px;
+}
+
+.socialNetworks img {
+    width: 25px;
+    height: 25px;
+    margin: 0 6px;
+}
+
+.row {
+    display: inline-block;
+    width: 100%;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.col {
+    display: inline-flex;
+    width: 200px;
+    height: auto;
+    justify-content: center;
+    border-radius: 15px 15px 0 0;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    background: rgba(0, 0, 0, 0.466);
+    transition: all 0.5s ease;
+}
+
+.col:hover {
+    height: auto;
+}
+
+.col div {
+    white-space: initial;
+    text-align: justify;
+}
+
+.col p {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.txt {
+    display: none;
+}
+
+
+/* .content {
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.658);
+    width: 200px;
+}
+
+.backContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+    background: white;
+    border-radius: 50%;
+} */
+
+.col img {
+    width: 180px;
+    height: 100px;
+    padding: 10px 40px;
+}
