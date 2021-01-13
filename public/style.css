@@ -1,17 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
-    /* font-family: 'Gilroy', sans-serif; */
-}
-
 ::-webkit-scrollbar {
     width: 4px;
-    position: absolute;
 }
 
 ::-webkit-scrollbar-track {
@@ -27,36 +18,160 @@
     background: linear-gradient(320deg, #3f00e6, #7f00fd);
 }
 
-main {
-    width: 100vw;
-    height: 100vh;
-    background: #131117;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    overflow-y: overlay;
+}
+
+div {
+    font-size: inherit;
+    color: inherit;
+    background: transparent;
+}
+
+.bn {
+    transition: opacity .2s;
+    cursor: pointer;
+    width: calc(55px + 7 * (100vw - 320px) / 1080);
+    height: calc(55px + 7 * (100vw - 320px) / 1080);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.bn>div {
+    width: calc(22px + 4 * (100vw - 320px) / 1080);
+    height: 10px;
+    position: relative;
+}
+
+.bn>div>span {
+    transition: background .4s;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #edf1f3;
+}
+
+.bn>div>span:nth-child(1) {
+    /* top: 0; */
+    /* transition: background .4s, top .2s .2s, transform .2s; */
+    transition: transform .3s, top .8s .8s;
+    animation: clickTop .5s ease-in-out forwards reverse;
+    transform: rotate(0);
+}
+
+.bn>div>span:nth-child(2) {
+    /* bottom: 0; */
+    /* transition: background .4s, bottom .2s .2s, transform .2s; */
+    transition: transform .3s, bottom .8s .8s;
+    animation: clickBottom .5s ease-in-out forwards reverse;
+    transform: rotate(0);
+}
+
+.bn:hover span:nth-child(1) {
+    animation: clickTop .5s ease-in-out forwards;
+    transform: rotate(45deg);
+}
+
+.bn:hover span:nth-child(2) {
+    animation: clickBottom .5s ease-in-out forwards;
+    transform: rotate(-45deg);
+}
+
+@keyframes clickTop {
+    0% {
+        top: 0;
+    }
+    90%,
+    100% {
+        top: 4px;
+    }
+}
+
+@keyframes clickBottom {
+    0% {
+        bottom: 0;
+    }
+    90%,
+    100% {
+        bottom: 4px;
+    }
+}
+
+.bn svg {
+    stroke: #3f00e6;
+    mix-blend-mode: normal;
+    stroke-linecap: round;
+    transition: all .8s, opacity 0s .8s;
+    stroke-dasharray: 0 999;
+    fill: transparent;
+    stroke-width: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.bn:hover svg {
+    stroke-dasharray: 300 999;
+    opacity: 1;
+    transition: all .8s, opacity 0s;
+    transform: rotate(90deg);
+}
+
+.sc .ct .pp {
+    width: calc(900px + 100 * (100vw - 320px) / 1080);
+    max-width: 100%;
+    line-height: 1.5;
+    padding-top: 15px;
+    margin: calc(10px + 1.5%) 0 calc(10px + 1%);
+}
+
+.sc .ct .pp p {
+    margin: calc(10px + 1.5%) 0 calc(10px + 1%);
+}
+
+strong {
+    font-weight: bold;
+}
+
+.sc .ct .intro {
+    font-size: calc(14px + 5 * (100vw - 320px) / 1080);
 }
 
 header {
-    position: fixed;
-    user-select: none;
-    width: calc(100% - 4px);
-    height: 20%;
+    position: absolute;
+    width: 100%;
     display: flex;
-    color: white;
-    justify-content: space-between;
-}
-
-.izqLogo,
-.derMenu {
-    width: 20%;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    cursor: pointer;
+    justify-content: space-between;
+    padding: calc(15px + 2%) calc(15px + 2%) calc(15px + 2%) calc(25px + 2%);
+    z-index: 9999;
 }
 
 .izqLogo a {
     text-decoration: none;
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 2em;
+    font-weight: 600;
+    font-size: calc(35px + 5 * (100vw - 320px) / 1080);
     color: white;
+}
+
+.txtColor {
+    background: linear-gradient(135deg, #3f00e6, #7f00fd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subRayado {
     background-size: 0% 2px;
     background-image: linear-gradient(320deg, #3f00e6, #7f00fd);
     background-position: 0% 100%;
@@ -64,74 +179,7 @@ header {
     transition: background-size 0.3s;
 }
 
-.izqLogo a:hover,
-.izqLogo a:focus {
-    background-size: 100% 2px;
-}
-
-.derMenu img {
-    width: 12%;
-}
-
-section {
-    width: 100%;
-    height: 80%;
-    padding: 0 20%;
-    margin: 5vh 0 0;
-}
-
-.presentacion {
-    margin-top: 20vh;
-    overflow: visible;
-    overflow-y: hidden;
-    text-align: center;
-}
-
-.presentacion .info {
-    height: 100%;
-    text-align: start;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.presentacion .info h1 {
-    font-size: calc(30px + 20 * (100vw - 320px) / 1080);
-    font-weight: 800;
-    margin-bottom: 5%;
-}
-
-.presentacion .info h4 {
-    font-weight: 100;
-}
-
-.social {
-    background-image: linear-gradient(320deg, #3f00e6, #7f00fd);
-    text-align: center;
-}
-
-.social .title {
-    height: 100%;
-    padding: 10% 0;
-}
-
-.social .title h1 {
-    color: white;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: calc(30px + 20 * (100vw - 320px) / 1080);
-}
-
-.social .icons {
-    width: 100%;
-    height: 80%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.social .icons a {
-    height: 20%;
-    display: flex;
-    align-items: center;
+.subRayado2 {
     background-size: 0% 2px;
     background-image: linear-gradient(to left, #16141c, #09080b);
     background-position: 0% 100%;
@@ -139,10 +187,102 @@ section {
     transition: background-size 0.3s;
 }
 
-.social .icons a:hover {
+.subRayado:hover,
+.subRayado2:hover {
     background-size: 100% 2px;
 }
 
-.social .icons a img {
-    height: 82%;
+.sc {
+    padding: calc(100px + 80 * (100vw - 320px) / 1080) 0;
+    font-weight: 200;
+    background: linear-gradient(120deg, #16141c, #09080b);
+    color: #edf1f3;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sc .ct {
+    width: 70vw;
+    margin: auto;
+}
+
+.sc .ct h2 {
+    margin-top: calc(25px + 2%);
+    font-size: calc(30px + 20 * (100vw - 320px) / 1080);
+    font-weight: 800;
+}
+
+.hspan>span {
+    line-height: 1.2;
+    overflow: hidden;
+    margin-bottom: calc(0px - 5 * (100vw - 320px) / 1080);
+}
+
+.hspan span {
+    display: block;
+    white-space: nowrap;
+}
+
+.sc h2 strong {
+    font-weight: inherit;
+}
+
+.com {
+    padding: calc(100px + 80 * (100vw - 320px) / 1080) 0;
+    background: linear-gradient(320deg, #3f00e6, #7f00fd);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: #edf1f3;
+}
+
+.com .ct {
+    text-align: center;
+}
+
+.com .bt {
+    height: 100%;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.com .bt strong {
+    user-select: none;
+    font-weight: 200;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+
+
+/* .com .bt strong {
+    background: #edf1f3;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    background-size: 0% 2px;
+    background-image: linear-gradient(320deg, blue, green);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s;
+}
+
+.com .bt strong:hover {
+    background-size: 100% 2px;
+} */
+
+
+/* .subRayado {
+    background-size: 0% 2px;
+    background-image: linear-gradient(320deg, #3f00e6, #7f00fd);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s;
+}
+
+.subRayado:hover {
+    background-size: 100% 2px;
+} */
+
+@media only screen and (max-width: 720px) {
+    .sc .ct h2 {
+        font-size: calc(22px + 20 * (100vw - 320px) / 1080);
+    }
 }

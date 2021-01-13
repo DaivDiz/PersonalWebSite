@@ -1,60 +1,115 @@
 <template>
-    <div>
+    <div id="App">
+        <header>
+            <div class="izqLogo">
+                <a href="/" class="subRayado">
+                    <!-- <img src="" alt="Imagen de Logo"> -->
+                    DaivDiz
+                </a>
+            </div>
+            <div class="bn" data-nav>
+                <div>
+                    <span></span>
+                    <span></span>
+                </div>
+                <svg viewBox="0 0 100 100">
+                    <defs>
+                        <linearGradient id="grd" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop data-color-c="l" offset="0%" stop-color="#7f00fd"></stop>
+                            <stop data-color-c="r" id="" offset="100%" stop-color="#3f00e6"></stop>
+                        </linearGradient>
+                    </defs>
+                    <circle stroke="url(#grd)" cx="50" cy="50" r="48">
+                    </circle>
+                </svg>
+            </div>
+        </header>
         <main>
-            <header>
-                <div class="izqLogo">
-                    <a href="/">
-                        <!-- <img src="" alt="Imagen de Logo"> -->
-                        DaivDiz
-                    </a>
-                </div>
-                <div class="derMenu">
-                    <img src="../assets/utils/menu.svg" alt="Imagen de Menu">
-                </div>
-            </header>
-            <section class="presentacion">
-                <div class="info">
-                    <h1>L'agence web qui <br> vous accompagne dans tous <br> vos projets digitaux.</h1>
-                    <h4>Nous sommes une <b>agence de développement web</b>, installée à Lyon depuis 2001. Nous créons pour nos clients, des sites sur mesure adaptés 
-                        à leurs besoins. Notre agence digitale lyonnaise dispose d’une grande expérience dans la création de site internet. Nous avons créé 
-                        plus de 3000 sites dans différents secteurs d’activité, industrie, immobilier, restauration, services… Quel que soit votre marché, 
-                        nous nous adaptons et vous proposons des solutions sur mesure. Nous avons la volonté de fournir à nos clients un accompagnement complet
-                        dans l’ensemble de leurs projets digitaux, c’est pourquoi nous sommes à votre écoute, nous développons pour vous des outils spécifiques
-                        à votre utilisation métier et vous conseillons sur votre stratégie digitale. Notre agence web vous offre un grand panel de services 
-                        afin de faciliter et d’optimiser vos performances numériques grâce à un interlocuteur unique.</h4>
-                    <h3>Une équipe jeune & passionnée à votre écoute</h3>
-                    <h4>Notre équipe est composée de professionnels du web passionnés par le digital. Nous effectuons une veille permanente des tendances et 
-                        des évolutions technologiques pour vous proposer des services évoluant au rythme des avancées techniques. Nos développeurs construisent
-                        pour vous un site performant et facile d’utilisation. Nos graphistes réalisent des designs modernes et engageants pour fournir à vos 
-                        visiteurs la meilleure expérience utilisateur. Notre traffic manager intègre les balises de référencement à votre site et vous 
-                        conseille sur vos mots clés et votre stratégie digitale.</h4>
-                </div>
-            </section>
-            <!-- <section class="silueta">
-                <div class="siluetaImg">
-                    <img src="../assets/utils/silueta.png" alt="Imagen de Silueta">
-                </div>
-                <div class="backColor">
-                </div>
-            </section> -->
-            <!-- <section class="social"> SECCION DE CONTACTOS
-                    <div class="title">
-                        <h1>Contactame !</h1>
-                        <div class="icons">
-                        <a href="http://facebook.com/daivdiz" target="_blank" rel="noopener noreferrer"><img src="../assets/social/facebook.svg" alt="Icono de Facebook"></a>
-                        <a href="http://twitter.com/daivdiz" target="_blank" rel="noopener noreferrer"><img src="../assets/social/twitter.svg" alt="Icono de Twitter"></a>
-                        <a href="http://github.com/daivdiz" target="_blank" rel="noopener noreferrer"><img src="../assets/social/github.svg" alt="Icono de GitHub"></a>
-                        <a href="http://instagram.com/daivdiz" target="_blank" rel="noopener noreferrer"><img src="../assets/social/instagram.svg" alt="Icono de Instagram"></a>
-                        <a href="http://linkedin.com/in/daivdiz" target="_blank" rel="noopener noreferrer"><img src="../assets/social/linkedin.svg" alt="Icono de LinkedIn"></a>
-                        <a href="mailto:daivdiz@outlook.com"><img src="../assets/social/outlook.svg" alt="Icono de Outlook"></a>
+            <div class="sc">
+                <div class="ct">
+                    <h2 class="hspan">
+                        Hola soy <strong class="txtColor"> David Diaz</strong>, <br> mucho gusto.
+                    </h2>
+                    <div class="pp">
+                        <p>Tengo 18 años y soy desarrollador <strong>Full-Stack</strong> enfocado más al desarrollo
+                        <strong>Front-End</strong>, cuento con solo experiencia personal desarrollando sitios web. Actualmente
+                        soy estudiante activo de <strong>Ingeniería Mecatrónica</strong> en la <strong>Universidad de San Buenaventura 
+                        - Sede Bogota</strong> y estudiante activo en la plataforma de aprendizaje virtual 
+                        <strong class="subRayado"><a href="https://platzi.com/p/DaivDiz/" target="_blank" class="txtColor">Platzi</a></strong>,
+                        tomando las clases de la <strong>Escuela de Desarrollo Web</strong> enfocandola a <strong>Front-End</strong> sin
+                        dejar de lado el <strong>Back-End</strong> y las <strong>Bases de Datos</strong>.</p>
+                        
+                        <p>Me gradue como bachiller siendo <strong>Técnico en Programación de Software</strong>, durante el
+                        técnico trabajé con tecnologías tales como: 
+                        <strong class="txtColor">Access</strong>,
+                        <strong class="txtColor">HTML</strong>,
+                        <strong class="txtColor">CSS</strong>,
+                        <strong class="txtColor">MySQL</strong> y
+                        <strong class="txtColor">Unity</strong>. <br>
+                        Desarrolle junto con unos compañeros un catálogo de motos con lenguaje <strong>Java</strong>
+                        como proyecto para el curso de <strong>Programación II</strong>. Tambien realicé una <strong>capacitación</strong>
+                        intensiva de aproximadamente 1 mes como filtro para la postulación a un puesto como dasarrollador
+                        <strong>Back-End</strong> en la empresa <strong>Hewtech Tecnology</strong>.</p>
+                        <p> Consistia en aprender lo que más se puediera
+                        en 1 mes de la rama que menos conocimiento tuvieramos, siendo mi rama la de <strong>Back-End</strong>. Como proyecto final realicé 
+                        una pagina web completa usando <strong class="txtColor">Node.Js</strong> para el <strong>Back-End</strong>,
+                        <strong class="txtColor">Vue.Js</strong> para el <strong>Front-End</strong> y 
+                        <strong class="txtColor">PostgreSQL</strong> como <strong>Base de Datos</strong>. <br>
+                        Mi proyecto consistia en realizar una pagina web completa con la temática de una <strong class="subRayado">
+                        <a href="#" class="txtColor">clínica veterinaria</a></strong>.</p>
+                        <!-- <p class="intro">Nous sommes une <strong>agence de développement web</strong>, installée à <strong>Lyon</strong>
+                         depuis 2001. Nous créons pour nos clients, des <strong>sites sur mesure</strong> adaptés à leurs besoins.</p>
+                        <p>Notre <strong>agence digitale lyonnaise</strong> dispose d’une grande expérience dans la 
+                        <strong>création de site internet</strong>. Nous avons créé plus de <strong>3000 sites</strong> dans différents 
+                        <strong>secteurs d’activité</strong>, industrie, immobilier, restauration, services… Quel que soit votre marché, 
+                        nous nous adaptons et vous proposons des <strong><a href="#" class="txtColor" title="Découvrir nos études de cas">
+                        solutions sur mesure</a></strong></p>
+                        <p>Nous avons la volonté de fournir à nos clients un <strong>accompagnement</strong> complet dans l’ensemble de leurs 
+                        <strong>projets digitaux</strong>, c’est pourquoi nous sommes à votre écoute, nous développons pour vous des 
+                        <strong>outils spécifiques</strong> à votre utilisation métier et vous conseillons sur votre <strong>stratégie digitale</strong>
+                        . Notre agence web vous offre un grand <strong><a href="#" class="txtColor" title="Découvrir nos services">panel de services</a>
+                        </strong> afin de faciliter et d’optimiser vos performances numériques grâce à un <strong>interlocuteur unique</strong>.</p> -->
                     </div>
-                    </div>
-            </section> -->
-            <section class="tecnologias">
-                <div class="tecUsadas">
-
                 </div>
-            </section>
+            </div>
         </main>
+        <div class="com">
+            <div class="ct">
+                <h2>
+                    <strong><span>N'attendez plus !</span></strong><br>
+                    <small>Donnez une nouvelle vie à votre communication !</small>
+                </h2>
+            </div>
+            <div class="bt">
+                <strong class="subRayado2" @click="form=!form">CONTACTAME</strong>
+            </div>
+            <div class="form" v-if="form">
+                <transition name="formAct">
+                    <h1>Hola soy el formulario</h1>
+                    <h1>Hola soy el formulario</h1>
+                    <h1>Hola soy el formulario</h1>
+                    <h1>Hola soy el formulario</h1>
+                    <h1>Hola soy el formulario</h1>
+                    <h1>Hola soy el formulario</h1>
+                </transition>
+            </div>
+        </div>
+        <footer>
+
+        </footer>
     </div>
 </template>
+
+<script>
+export default {
+    data(){
+        return{
+            form: false,
+        }
+    }
+}
+</script>
+
+<style>
+
+</style>
