@@ -1,162 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap');
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    /* font-family: 'Nunito', sans-serif; */
-    font-family: 'Raleway', sans-serif;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Nunito', sans-serif;
 }
 
-html {
-    background: #100f14;
+::-webkit-scrollbar {
+    width: 4px;
+    position: absolute;
 }
 
-body {
-    padding: 50%;
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px 0 0 5px;
+    background: linear-gradient(320deg, #3f00e6, #7f00fd);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(320deg, #3f00e6, #7f00fd);
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background: #131117;
 }
 
 header {
+    position: fixed;
+    user-select: none;
+    width: calc(100% - 4px);
+    height: 20%;
     display: flex;
-    justify-content: space-between;
-    position: relative;
-    height: 20vh;
-    width: 100vw;
-    padding: 5vw;
-    background: cornflowerblue;
-}
-
-.der {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.icon {
-    display: flex;
-    height: inherit;
-    align-items: center;
-    justify-content: center;
-    background: cornsilk;
-}
-
-.icon a {
-    text-decoration: none;
-    font-size: 1.5em;
     color: white;
-    font-weight: 900;
+    justify-content: space-between;
 }
 
-.bordes {
+.izqLogo,
+.derMenu {
+    width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 4.5vw;
-    height: 4.5vw;
-    border-radius: 50%;
-}
-
-.bordes img {
-    position: absolute;
-    z-index: 30;
-    width: 3.3vw;
-    height: 3.3vw;
-    border-radius: 50%;
-    transition: 0.3s;
-    padding: 7px;
-}
-
-.bordes img:hover {
-    border-radius: 0%;
     cursor: pointer;
 }
 
-svg {
-    animation: svg-animation 8s infinite linear;
-    width: 4vw;
-    height: 4vw;
-}
-
-@keyframes svg-animation {
-    0% {
-        transform: rotateZ(0deg);
-    }
-    100% {
-        transform: rotateZ(360deg)
-    }
-}
-
-circle {
-    fill: transparent;
-    stroke-linecap: round;
-    stroke-dasharray: 280;
-    stroke-dashoffset: 280;
-    transform-origin: 50% 50%;
-    stroke-width: 2;
-}
-
-@keyframes circle-animation {
-    0% {
-        stroke-dashoffset: 280;
-        transform: rotate(0deg);
-    }
-    100% {
-        stroke-dashoffset: 0;
-        transform: rotate(360deg);
-    }
-}
-
-.body {
-    background: coral;
-    width: 100vw;
-    height: 90vh;
-}
-
-.fondo {
-    margin-left: 10vw;
-    background: linear-gradient(120deg, #7a00fb, #4200e7);
-    width: 30vw;
-    height: 30vw;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    border-radius: 10%;
-    transition: all 0.3s;
-}
-
-.fondo .contenedorImg {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    width: 30vw;
-    height: auto;
-}
-
-.fondo .contenedorImg div {
-    text-align: center;
+.izqLogo a {
+    text-decoration: none;
     color: white;
-    transition: all 0.3s;
 }
 
-.fondo .contenedorImg div img {
-    width: 20vw;
-    margin-bottom: -8vw;
-    transition: all 0.3s;
-    position: relative;
-    z-index: 10;
+section {
+    width: 100%;
+    height: 80%;
+    padding: 0 20%;
 }
 
-.fondo .contenedorImg div .iconSilueta {
-    width: 40px;
+.presentacion {
+    margin-top: 20vh;
 }
 
-.fondo .contenedorImg div .info {
-    position: relative;
-    z-index: 20;
-    margin-bottom: 5%;
-    padding-bottom: ;
+.presentacion .info {
+    background: orange;
+    height: 100%;
+    text-align: start;
 }
 
-.fondo .contenedorImg div .info h4 {
-    font-weight: 100;
+.social .icons {
+    height: 100%;
+    background: orangered;
 }

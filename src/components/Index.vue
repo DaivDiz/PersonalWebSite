@@ -1,63 +1,40 @@
 <template>
     <div>
-        <header>
-            <div class="icon">
-                <a href="/">david diaz</a>
-            </div>
-            <div class="der">
-                <div class="bordes" @click="menu=!menu">
-                    <svg class="progress-ring" width="4vw" height="4vw" >
-                        <linearGradient id="linearColors">
-                            <stop offset="0%" stop-color="#7a00fb"/>
-                            <stop offset="100%" stop-color="#4200e7"/>
-                        </linearGradient>
-                        <transition name="fill">
-                            <circle v-if="menu" stroke="url(#linearColors)" r="1.9vw" cx="2vw" cy="2vw"/>
-                        </transition>
-                    </svg>
-                    <img src="../assets/utils/menu.svg" :style="[menu ? {transform: 'rotateZ(-90deg)'} : {transform: 'rotateZ(0deg)'}]" alt="Boton de Menu">
+        <main>
+            <header>
+                <div class="izqLogo">
+                    <a href="/"><img src="" alt="Imagen de Logo"></a>
                 </div>
-            </div>
-        </header>
-        <div class="body">
-            <div class="fondo" @mouseenter="hover=true" @mouseleave="hover=false">
-                <div class="contenedorImg">
-                    <div>
-                        <img :style="[hover ? {transform: 'scale(1.15)'}:{transform: 'scale(1)'}]" src="../assets/utils/silueta.png" alt="">
-                        <div class="info">
-                            <h1>David</h1>
-                            <h4>Novice Developer</h4>
-                        </div>
-                    </div>
+                <div class="derMenu">
+                    <img src="" alt="Imagen de Menu">
                 </div>
-            </div>
-        </div>
-        <!-- <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="45"/>
-        </svg> -->
+            </header>
+            <section class="presentacion">
+                <div class="info">
+                    <h1>L'agence web qui <br> vous accompagne dans tous <br> vos projets digitaux.</h1>
+                    <h4>Nous sommes une <b>agence de développement web</b>, installée à Lyon depuis 2001. Nous créons pour nos clients, des sites sur mesure adaptés 
+                        à leurs besoins. Notre agence digitale lyonnaise dispose d’une grande expérience dans la création de site internet. Nous avons créé 
+                        plus de 3000 sites dans différents secteurs d’activité, industrie, immobilier, restauration, services… Quel que soit votre marché, 
+                        nous nous adaptons et vous proposons des solutions sur mesure. Nous avons la volonté de fournir à nos clients un accompagnement complet
+                        dans l’ensemble de leurs projets digitaux, c’est pourquoi nous sommes à votre écoute, nous développons pour vous des outils spécifiques
+                        à votre utilisation métier et vous conseillons sur votre stratégie digitale. Notre agence web vous offre un grand panel de services 
+                        afin de faciliter et d’optimiser vos performances numériques grâce à un interlocuteur unique.</h4>
+                    <h3>Une équipe jeune & passionnée à votre écoute</h3>
+                    <h4>Notre équipe est composée de professionnels du web passionnés par le digital. Nous effectuons une veille permanente des tendances et 
+                        des évolutions technologiques pour vous proposer des services évoluant au rythme des avancées techniques. Nos développeurs construisent
+                        pour vous un site performant et facile d’utilisation. Nos graphistes réalisent des designs modernes et engageants pour fournir à vos 
+                        visiteurs la meilleure expérience utilisateur. Notre traffic manager intègre les balises de référencement à votre site et vous 
+                        conseille sur vos mots clés et votre stratégie digitale.</h4>
+                    <img src="" alt="Imagen de Silueta">
+                </div>
+            </section>
+            <section class="social">
+                <div class="icons">
+                    <img src="" alt="Icono de Facebook">
+                    <img src="" alt="Icono de Twitter">
+                    <img src="" alt="Icono de GitHub">
+                </div>
+            </section>
+        </main>
     </div>
 </template>
-
-<script>
-export default{
-    data(){
-        return{
-            menu: false,
-            hover:false
-        }
-    },
-    computed:{
-        rotate(){
-            return {
-                
-            }
-        }
-    }
-}
-</script>
-
-<style>
-.bounce-enter-active{
-    transform: scale(1.2);
-}
-</style>
