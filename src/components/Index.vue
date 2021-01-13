@@ -3,10 +3,13 @@
         <main>
             <header>
                 <div class="izqLogo">
-                    <a href="/"><img src="" alt="Imagen de Logo"></a>
+                    <a href="/">
+                        <!-- <img src="" alt="Imagen de Logo"> -->
+                        DaivDiz
+                    </a>
                 </div>
                 <div class="derMenu">
-                    <img src="" alt="Imagen de Menu">
+                    <img src="../assets/utils/menu.svg" alt="Imagen de Menu">
                 </div>
             </header>
             <section class="presentacion">
@@ -25,14 +28,31 @@
                         pour vous un site performant et facile d’utilisation. Nos graphistes réalisent des designs modernes et engageants pour fournir à vos 
                         visiteurs la meilleure expérience utilisateur. Notre traffic manager intègre les balises de référencement à votre site et vous 
                         conseille sur vos mots clés et votre stratégie digitale.</h4>
-                    <img src="" alt="Imagen de Silueta">
                 </div>
             </section>
-            <section class="social">
-                <div class="icons">
-                    <img src="" alt="Icono de Facebook">
-                    <img src="" alt="Icono de Twitter">
-                    <img src="" alt="Icono de GitHub">
+            <!-- <section class="silueta">
+                <div class="siluetaImg">
+                    <img src="../assets/utils/silueta.png" alt="Imagen de Silueta">
+                </div>
+                <div class="backColor">
+                </div>
+            </section> -->
+            <!-- <section class="social"> SECCION DE CONTACTOS
+                    <div class="title">
+                        <h1>Contactame !</h1>
+                        <div class="icons">
+                        <a href="http://facebook.com/daivdiz" target="_blank" rel="noopener noreferrer"><img src="../assets/social/facebook.svg" alt="Icono de Facebook"></a>
+                        <a href="http://twitter.com/daivdiz" target="_blank" rel="noopener noreferrer"><img src="../assets/social/twitter.svg" alt="Icono de Twitter"></a>
+                        <a href="http://github.com/daivdiz" target="_blank" rel="noopener noreferrer"><img src="../assets/social/github.svg" alt="Icono de GitHub"></a>
+                        <a href="http://instagram.com/daivdiz" target="_blank" rel="noopener noreferrer"><img src="../assets/social/instagram.svg" alt="Icono de Instagram"></a>
+                        <a href="http://linkedin.com/in/daivdiz" target="_blank" rel="noopener noreferrer"><img src="../assets/social/linkedin.svg" alt="Icono de LinkedIn"></a>
+                        <a href="mailto:daivdiz@outlook.com"><img src="../assets/social/outlook.svg" alt="Icono de Outlook"></a>
+                    </div>
+                    </div>
+            </section> -->
+            <section class="tecnologias">
+                <div class="tecUsadas">
+
                 </div>
             </section>
         </main>
