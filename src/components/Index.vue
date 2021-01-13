@@ -2,29 +2,33 @@
     <div>
         <header>
             <div class="icon">
-                <a href="#"></a>
+                <a href="/">david diaz</a>
             </div>
             <div class="der">
-                <div class="bordes" @mouseenter="hover=true" @mouseleave="hover=false" @click="menu=!menu">
+                <div class="bordes" @click="menu=!menu">
                     <svg class="progress-ring" width="4vw" height="4vw" >
                         <linearGradient id="linearColors">
                             <stop offset="0%" stop-color="#7a00fb"/>
                             <stop offset="100%" stop-color="#4200e7"/>
                         </linearGradient>
-                        <transition name="fill" mode="out-in">
+                        <transition name="fill">
                             <circle v-if="menu" stroke="url(#linearColors)" r="1.9vw" cx="2vw" cy="2vw"/>
-                            
                         </transition>
                     </svg>
                     <img src="../assets/utils/menu.svg" :style="[menu ? {transform: 'rotateZ(-90deg)'} : {transform: 'rotateZ(0deg)'}]" alt="Boton de Menu">
                 </div>
             </div>
         </header>
-        <div class="swp">
-            <div class="illu">
-                <div class="silueta">
-                    <img src="../assets/utils/silueta.png" alt="">
-                    <h2>Hola</h2>
+        <div class="body">
+            <div class="fondo" @mouseenter="hover=true" @mouseleave="hover=false">
+                <div class="contenedorImg">
+                    <div>
+                        <img :style="[hover ? {transform: 'scale(1.15)'}:{transform: 'scale(1)'}]" src="../assets/utils/silueta.png" alt="">
+                        <div class="info">
+                            <h1>David</h1>
+                            <h4>Novice Developer</h4>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -38,8 +42,8 @@
 export default{
     data(){
         return{
-            hover:'',
-            menu:'',
+            menu: false,
+            hover:false
         }
     },
     computed:{
@@ -53,12 +57,7 @@ export default{
 </script>
 
 <style>
-.fill-enter-to,.fill-leave{
-}
-.fill-enter-active{
-    animation: circle-animation 8s forwards normal;
-}
-.fill-leave-active{
-    animation: circle-animation 1.5s forwards reverse;
+.bounce-enter-active{
+    transform: scale(1.2);
 }
 </style>

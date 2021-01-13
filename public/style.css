@@ -12,30 +12,37 @@ html {
     background: #100f14;
 }
 
+body {
+    padding: 50%;
+}
+
 header {
     display: flex;
     justify-content: space-between;
     position: relative;
+    height: 20vh;
+    width: 100vw;
+    padding: 5vw;
+    background: cornflowerblue;
 }
 
 .der {
-    width: 10vw;
-    height: 10vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .icon {
-    width: 10vw;
-    height: 10vw;
     display: flex;
-    justify-content: center;
+    height: inherit;
     align-items: center;
+    justify-content: center;
+    background: cornsilk;
 }
 
 .icon a {
     text-decoration: none;
+    font-size: 1.5em;
     color: white;
     font-weight: 900;
 }
@@ -86,52 +93,70 @@ circle {
     stroke-dashoffset: 280;
     transform-origin: 50% 50%;
     stroke-width: 2;
-    animation-fill-mode: forwards;
 }
 
 @keyframes circle-animation {
-    from {
+    0% {
         stroke-dashoffset: 280;
         transform: rotate(0deg);
     }
-    to {
+    100% {
         stroke-dashoffset: 0;
         transform: rotate(360deg);
     }
 }
 
-.swp {
-    width: 100%;
-    height: auto;
-    display: flex;
+.body {
+    background: coral;
+    width: 100vw;
+    height: 90vh;
 }
 
-.swp .illu {
+.fondo {
     margin-left: 10vw;
-    padding: 5vw;
+    background: linear-gradient(120deg, #7a00fb, #4200e7);
     width: 30vw;
     height: 30vw;
-    background: linear-gradient(120deg, #7a00fb, #4200e7);
-    border-radius: 10%;
     display: flex;
-    text-align: center;
-}
-
-.swp .illu .silueta {
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 10%;
     transition: all 0.3s;
 }
 
-.swp .illu .silueta:hover {
-    margin-top: -8%;
+.fondo .contenedorImg {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 30vw;
+    height: auto;
 }
 
-.swp .illu .silueta img {
-    width: 20vw;
-    position: relative;
-    margin-top: -40%;
-    user-select: none;
-}
-
-.swp .illu .silueta h2 {
+.fondo .contenedorImg div {
+    text-align: center;
     color: white;
+    transition: all 0.3s;
+}
+
+.fondo .contenedorImg div img {
+    width: 20vw;
+    margin-bottom: -8vw;
+    transition: all 0.3s;
+    position: relative;
+    z-index: 10;
+}
+
+.fondo .contenedorImg div .iconSilueta {
+    width: 40px;
+}
+
+.fondo .contenedorImg div .info {
+    position: relative;
+    z-index: 20;
+    margin-bottom: 5%;
+    padding-bottom: ;
+}
+
+.fondo .contenedorImg div .info h4 {
+    font-weight: 100;
 }
