@@ -11,11 +11,14 @@
 
 ::-webkit-scrollbar-thumb {
     border-radius: 5px 0 0 5px;
-    background: linear-gradient(320deg, #3f00e6, #7f00fd);
 }
 
+.txtColor,
+.subRayado,
+.com,
+::-webkit-scrollbar-thumb,
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(320deg, #3f00e6, #7f00fd);
+    background: linear-gradient(320deg, #DCE35B, #45B649);
 }
 
 * {
@@ -76,12 +79,12 @@ div {
     transform: rotate(0);
 }
 
-.bn:hover span:nth-child(1) {
+.bn:active span:nth-child(1) {
     animation: clickTop .5s ease-in-out forwards;
     transform: rotate(45deg);
 }
 
-.bn:hover span:nth-child(2) {
+.bn:active span:nth-child(2) {
     animation: clickBottom .5s ease-in-out forwards;
     transform: rotate(-45deg);
 }
@@ -165,23 +168,30 @@ header {
     color: white;
 }
 
-.txtColor {
-    background: linear-gradient(135deg, #3f00e6, #7f00fd);
+.txtColor,
+.txtColor2 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
+.txtColor2 {
+    background-image: linear-gradient(320deg, #2193b0, #6dd5ed);
+}
+
 .subRayado {
     background-size: 0% 2px;
-    background-image: linear-gradient(320deg, #3f00e6, #7f00fd);
     background-position: 50% 100%;
     background-repeat: no-repeat;
     transition: background-size 0.3s;
 }
 
+.subRayado2,
+.sc {
+    background-image: linear-gradient(to left, #16141c, #09080b);
+}
+
 .subRayado2 {
     background-size: 0% 2px;
-    background-image: linear-gradient(to left, #16141c, #09080b);
     background-position: 50% 100%;
     background-repeat: no-repeat;
     transition: background-size 0.3s;
@@ -195,7 +205,6 @@ header {
 .sc {
     padding: calc(100px + 80 * (100vw - 320px) / 1080) 0;
     font-weight: 200;
-    background: linear-gradient(120deg, #16141c, #09080b);
     color: #edf1f3;
     font-family: 'Montserrat', sans-serif;
 }
@@ -228,9 +237,8 @@ header {
 
 .com {
     padding: calc(100px + 80 * (100vw - 320px) / 1080) 0;
-    background: linear-gradient(320deg, #3f00e6, #7f00fd);
     font-family: 'Montserrat', sans-serif;
-    transition: transform .3s;
+    transition: transform .1s ease-out;
     font-weight: 300;
     color: #edf1f3;
 }
@@ -239,23 +247,37 @@ header {
     text-align: center;
 }
 
+.com .ct h2 {
+    line-height: calc(45px + 7 * (100vw - 320px) / 1080);
+}
+
+.com .ct strong {
+    font-weight: 200;
+    font-size: calc(41px + 7 * (100vw - 320px) / 1080);
+}
+
+.com .ct small {
+    font-weight: 700;
+    font-size: calc(41px + 7 * (100vw - 320px) / 1080);
+}
+
 .com .bt {
     height: 100%;
-    margin-top: 25px;
+    margin-top: calc(50px + 7 * (100vw - 320px) / 1080);
     text-align: center;
 }
 
 .com .bt strong {
     user-select: none;
-    font-weight: 200;
+    font-weight: 300;
+    font-size: calc(41px + 7 * (100vw - 320px) / 1080);
     letter-spacing: 5px;
-    cursor: pointer;
 }
 
 .com .iconList {
     display: flex;
     justify-content: space-evenly;
-    margin-top: calc(10px + 20 * (100vw - 320px) / 1080);
+    /* margin-top: calc(20px + 7 * (100vw - 320px) / 1080); */
 }
 
 .cn {
@@ -275,8 +297,7 @@ header {
 }
 
 .cn>img {
-    width: calc(15px + 20 * (100vw - 320px) / 1080);
-    /* margin-top: 5px; */
+    height: calc(30px + 20 * (100vw - 320px) / 1080);
 }
 
 .cn svg {
@@ -287,9 +308,10 @@ header {
     stroke-dasharray: 0 999;
     fill: transparent;
     stroke-width: 4px;
+    width: 200%;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -50%;
+    left: -50%;
     opacity: 0;
 }
 
@@ -304,7 +326,18 @@ header {
     .sc .ct h2 {
         font-size: calc(22px + 20 * (100vw - 320px) / 1080);
     }
+    .com .ct strong {
+        font-size: calc(28px + 7 * (100vw - 320px) / 1080);
+    }
+    .com .ct small {
+        font-size: calc(20px + 7 * (100vw - 320px) / 1080);
+    }
+    .cn svg {
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
     .cn>img {
-        width: calc(18px + 20 * (100vw - 320px) / 1080);
+        width: calc(22px + 20 * (100vw - 320px) / 1080);
     }
 }
