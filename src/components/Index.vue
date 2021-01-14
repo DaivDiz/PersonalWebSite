@@ -181,36 +181,57 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
-::-webkit-scrollbar {
+*::-webkit-scrollbar {
     width: 4px;
 }
 
-::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
     background: transparent;
 }
 
-::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
     border-radius: 5px 0 0 5px;
+}
+*::-webkit-scrollbar-thumb,
+*::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(320deg, #DCE35B, #45B649);
 }
 
 .txtColor,
 .subRayado,
-.com,
-::-webkit-scrollbar-thumb,
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(320deg, #3f00e6, #7f00fd);
+.com{
+    background: linear-gradient(320deg, #DCE35B, #45B649);
 }
+
 
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    scrollbar-color: #DCE35B #45B649;
+    scrollbar-width: thin;
 }
 
 html {
     overflow-y: overlay;
 }
 
+html, body{
+    font-size:calc(13px + 2 * (100vw - 320px) / 1080);
+    background-color:#edf1f3;
+    color:#16141c;
+    line-height:1;
+    width:100%;
+    height:100%;
+    /* overflow:hidden; */
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+a{
+    text-decoration: none;
+}
 div {
     font-size: inherit;
     color: inherit;
