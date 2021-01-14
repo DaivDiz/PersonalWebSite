@@ -174,7 +174,7 @@ header {
 .subRayado {
     background-size: 0% 2px;
     background-image: linear-gradient(320deg, #3f00e6, #7f00fd);
-    background-position: 0% 100%;
+    background-position: 50% 100%;
     background-repeat: no-repeat;
     transition: background-size 0.3s;
 }
@@ -182,7 +182,7 @@ header {
 .subRayado2 {
     background-size: 0% 2px;
     background-image: linear-gradient(to left, #16141c, #09080b);
-    background-position: 0% 100%;
+    background-position: 50% 100%;
     background-repeat: no-repeat;
     transition: background-size 0.3s;
 }
@@ -230,6 +230,7 @@ header {
     padding: calc(100px + 80 * (100vw - 320px) / 1080) 0;
     background: linear-gradient(320deg, #3f00e6, #7f00fd);
     font-family: 'Montserrat', sans-serif;
+    transition: transform .3s;
     font-weight: 300;
     color: #edf1f3;
 }
@@ -251,35 +252,53 @@ header {
     cursor: pointer;
 }
 
+.com .iconList {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: calc(10px + 20 * (100vw - 320px) / 1080);
+}
 
-/* .com .bt strong {
-    background: #edf1f3;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.cn {
+    transition: opacity .2s;
     cursor: pointer;
-    background-size: 0% 2px;
-    background-image: linear-gradient(320deg, blue, green);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    transition: background-size 0.3s;
+    width: calc(55px + 7 * (100vw - 320px) / 1080);
+    height: calc(55px + 7 * (100vw - 320px) / 1080);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
-.com .bt strong:hover {
-    background-size: 100% 2px;
-} */
-
-
-/* .subRayado {
-    background-size: 0% 2px;
-    background-image: linear-gradient(320deg, #3f00e6, #7f00fd);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    transition: background-size 0.3s;
+.cn {
+    display: flex;
 }
 
-.subRayado:hover {
-    background-size: 100% 2px;
-} */
+.cn>img {
+    width: calc(15px + 20 * (100vw - 320px) / 1080);
+    /* margin-top: 5px; */
+}
+
+.cn svg {
+    stroke: green;
+    mix-blend-mode: normal;
+    stroke-linecap: round;
+    transition: all .8s, opacity 0s .8s;
+    stroke-dasharray: 0 999;
+    fill: transparent;
+    stroke-width: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.cn:hover svg {
+    stroke-dasharray: 300 999;
+    opacity: 1;
+    transition: all .8s, opacity 0s;
+    transform: rotate(90deg);
+}
 
 @media only screen and (max-width: 720px) {
     .sc .ct h2 {

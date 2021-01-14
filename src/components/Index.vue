@@ -81,18 +81,60 @@
                 </h2>
             </div>
             <div class="bt">
-                <strong class="subRayado2" @click="form=!form">CONTACTAME</strong>
+                <strong class="subRayado2" @click="iconList=!iconList">Redes Sociales </strong>
             </div>
-            <div class="form" v-if="form">
-                <transition name="formAct">
-                    <h1>Hola soy el formulario</h1>
-                    <h1>Hola soy el formulario</h1>
-                    <h1>Hola soy el formulario</h1>
-                    <h1>Hola soy el formulario</h1>
-                    <h1>Hola soy el formulario</h1>
-                    <h1>Hola soy el formulario</h1>
-                </transition>
-            </div>
+            <transition name="iconList">
+                <div class="iconList" v-if="iconList">
+                        <a href="https://facebook.com/daivdiz" class="cn" target="_blank"><img src="../assets/social/facebook.svg" alt="Icono de Facebook">
+                        <svg viewBox="0 0 100 100">
+                            <circle stroke="url(#grd)" cx="50" cy="50" r="48">
+                            </circle>
+                        </svg></a>
+                        <a href="https://twitter.com/daivdiz" class="cn" target="_blank"><img src="../assets/social/twitter.svg" alt="Icono de Twitter"><svg viewBox="0 0 100 100">
+                            <defs>
+                                <linearGradient id="grd2" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop data-color-c="l" offset="0%" stop-color="#09080b"></stop>
+                                    <stop data-color-c="r" id="" offset="100%" stop-color="#16141c"></stop>
+                                </linearGradient>
+                            </defs>
+                            <circle stroke="url(#grd2)" cx="50" cy="50" r="48">
+                            </circle>
+                        </svg></a>
+                        <a href="https://github.com/daivdiz" class="cn" target="_blank"><img src="../assets/social/github.svg" alt="Icono de GitHub"><svg viewBox="0 0 100 100">
+                            <defs>
+                                <linearGradient id="grd3" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop data-color-c="l" offset="0%" stop-color="#ef32d9"></stop>
+                                    <stop data-color-c="r" id="" offset="100%" stop-color="#89fffd"></stop>
+                                </linearGradient>
+                            </defs>
+                            <circle stroke="url(#grd3)" cx="50" cy="50" r="48">
+                            </circle>
+                        </svg></a>
+                        
+                        <a href="https://www.linkedin.com/in/daivdiz/" class="cn" target="_blank"><img src="../assets/social/linkedin.svg" alt="Icono de Linkedin"><svg viewBox="0 0 100 100">
+                            <defs>
+                                <linearGradient id="grd4" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop data-color-c="l" offset="0%" stop-color="#41295a"></stop>
+                                    <stop data-color-c="r" id="" offset="100%" stop-color="#2F0743"></stop>
+                                </linearGradient>
+                            </defs>
+                            <circle stroke="url(#grd4)" cx="50" cy="50" r="48">
+                            </circle>
+                        </svg></a>
+                        
+                        <a href="https://www.instagram.com/daivdiz/" class="cn" target="_blank"><img src="../assets/social/instagram.svg" alt="Icono de Instagram"><svg viewBox="0 0 100 100">
+                            <defs>
+                                <linearGradient id="grd5" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop data-color-c="l" offset="0%" stop-color="#6E48AA"></stop>
+                                    <stop data-color-c="r" id="" offset="100%" stop-color="#9D50BB"></stop>
+                                </linearGradient>
+                            </defs>
+                            <circle stroke="url(#grd5)" cx="50" cy="50" r="48">
+                            </circle>
+                        </svg></a> 
+                        
+                </div>
+            </transition>
         </div>
         <footer>
 
@@ -104,12 +146,25 @@
 export default {
     data(){
         return{
-            form: false,
+            iconList: false,
         }
     }
 }
 </script>
 
 <style>
-
+.iconList-enter, .iconList-leave-to{
+    transform: translateY(calc(10px + 20 * (100vw - 320px) / 1080));
+    opacity: 0;
+}
+.iconList-enter-active{
+    transition: all 2s;
+}
+.iconList-leave-active{
+    transition: all 2s;
+}
+.iconList-leave, .iconList-enter-to{
+    transform: translateY(calc(-10px + 20 * (100vw - 320px) / 1080));
+    opacity: 1;
+}
 </style>
