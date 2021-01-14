@@ -198,7 +198,7 @@ export default {
 .com,
 ::-webkit-scrollbar-thumb,
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(320deg, #DCE35B, #45B649);
+    background: linear-gradient(320deg, #3f00e6, #7f00fd);
 }
 
 * {
